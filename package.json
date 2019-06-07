@@ -35,9 +35,23 @@
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
     "babel-loader": "^8.0.6",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
+    "prettier": "^1.18.0",
     "react-docgen-typescript": "^1.12.4",
     "react-styleguidist": "^9.1.4",
     "typescript": "^3.5.1",
     "webpack": "^4.33.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
