@@ -1,5 +1,5 @@
 ```jsx harmony
 import theme from "./theme";
 
-<Colors theme={theme} />;
+<Spacing theme={theme} />;
 ```

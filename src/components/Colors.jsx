@@ -1,16 +1,29 @@
-import * as React from "react";
-import styled from "@emotion/styled";
+import React from "react";
+import { ThemeProvider } from "emotion-theming";
+import { omitBy, pickBy, isString } from "lodash";
+import { Swatches, ColorSwatch, PaletteSwatch } from "../lib";
+import Stack from "stack-styled/emotion/Stack";
 
-interface Props {
-	foo?: boolean;
+export default function Colors({ theme }) {
+	const gap = 2;
+	const colors = pickBy(theme.colors, isString);
+	const palettes = omitBy(theme.colors, isString);
+	return (
+		<ThemeProvider theme={theme}>
+			<Stack gap={gap}>
+				<Swatches theme={theme} items={palettes}>
+					{(key, value) => (
+						<Stack gap={0} minWidth={50}>
+							<PaletteSwatch token={key} value={value} />
+						</Stack>
+					)}
+				</Swatches>
+				<Stack gap={gap} minWidth={50}>
+					<Swatches theme={theme} items={colors}>
+						{(key, value) => <ColorSwatch token={key} value={value} />}
+					</Swatches>
+				</Stack>
+			</Stack>
+		</ThemeProvider>
+	);
 }
-
-const Colors =
-	styled.div <
-	Props >
-	`
-  border: 1px solid ${props => (props.foo ? "red" : "yellow")}
-`;
-
-/** @component */
-export default Colors;
