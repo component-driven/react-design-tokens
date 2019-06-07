@@ -1,0 +1,3 @@
+```jsx
+<Colors>test</Colors>
+```
