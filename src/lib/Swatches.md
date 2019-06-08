@@ -1,11 +1,16 @@
 ```jsx harmony
 import Stack from "stack-styled/emotion/Stack";
 import theme from "../components/theme";
-import { SpacingSwatch } from "./";
+import { Swatch, SwatchValue, SwatchToken, SpacingSwatch } from "./";
 
 <Stack gap={2}>
   <Swatches theme={theme} items={theme.space}>
-    {(key, value) => <SpacingSwatch token={key} value={value} />}
+    {(token, value) => (
+      <Swatch token={token} value={value}>
+        <SwatchToken>{token}</SwatchToken>
+        <SpacingSwatch value={value} />
+      </Swatch>
+    )}
   </Swatches>
 </Stack>;
 ```

@@ -17,6 +17,9 @@ module.exports = {
 		return `import { ${name} } from '${pkg.name}';`;
 	},
 	skipComponentsWithoutExample: true,
+	styleguideComponents: {
+		Wrapper: path.join(__dirname, "styleguide", "Provider.jsx")
+	},
 	sections: [
 		{
 			name: "Introduction",

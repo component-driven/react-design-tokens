@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeProvider } from "emotion-theming";
+import { ThemeProvider } from "theme-ui";
 import { omitBy, pickBy, isString } from "lodash";
 import { Swatches, ColorSwatch, PaletteSwatch } from "../lib";
 import Stack from "stack-styled/emotion/Stack";

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import { color, typography, space } from "styled-system";
 import copy from "clipboard-copy";
+import { css } from "theme-ui";
 
 const SwatchBase = styled("button")`
 	border: none;
@@ -20,7 +21,16 @@ const SwatchBase = styled("button")`
 `;
 
 function Swatch(props) {
-	return <SwatchBase {...props} onClick={() => copy(props.token)} />;
+	return (
+		<SwatchBase
+			{...props}
+			onClick={() => copy(props.token)}
+			css={css({
+				fontFamily: "body",
+				fontSize: "md"
+			})}
+		/>
+	);
 }
 
 Swatch.propTypes = {

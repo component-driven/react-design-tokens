@@ -1,17 +1,16 @@
-```jsx harmony
-import { ThemeProvider } from "emotion-theming";
-import theme from "../components/theme";
+Palette swatch renders all color tokens from a palette as defined in [System UI theme specification](https://system-ui.com/theme/)
 
-<ThemeProvider theme={theme}>
-  <PaletteSwatch token={"red"} value={theme.colors.red} />
-</ThemeProvider>;
+It supports arrays
+
+```jsx harmony
+import theme from "../components/theme";
+<PaletteSwatch token={"red"} value={theme.colors.red} />;
 ```
 
+as well as object notation:
+
 ```jsx harmony
-import { ThemeProvider } from "emotion-theming";
 import theme from "../components/theme";
 
-<ThemeProvider theme={theme}>
-  <PaletteSwatch token={"slate"} value={theme.colors.slate} />
-</ThemeProvider>;
+<PaletteSwatch token={"slate"} value={theme.colors.slate} />;
 ```

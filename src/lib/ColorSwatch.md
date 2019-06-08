@@ -1,8 +1,7 @@
-```jsx harmony
-import { ThemeProvider } from "emotion-theming";
-import theme from "../components/theme";
+Renders a color swatch with a readable text.
 
-<ThemeProvider theme={theme}>
-  <ColorSwatch token={"accent"} value={theme.colors.accent} />
-</ThemeProvider>;
+```jsx harmony
+<ColorSwatch token={"accent"} value={"#C0100F"} />
 ```
+
+When clicked, the value of the token is copied to clipboard.

@@ -3,7 +3,7 @@ import { modularScale } from "polished";
 const scale = value => modularScale(value, "1rem", "goldenSection");
 
 const fontSizes = {
-	xl: scale(3),
+	xl: scale(2),
 	lg: scale(1),
 	md: scale(0),
 	sm: scale(-0.5),
@@ -34,7 +34,9 @@ const palette = {
 export default {
 	fontSizes,
 	fonts: {
-		base: "Helvetica Neue, Helvetica, Arial, sans-serif"
+		body: "system-ui, sans-serif",
+		heading: '"Avenir Next", sans-serif',
+		monospace: "Menlo, monospace"
 	},
 	space: [
 		0,
@@ -49,9 +51,13 @@ export default {
 	],
 	colors: {
 		...palette,
-		bg: palette.slate.lightest,
 		text: palette.slate.base,
-		accent: palette.red[8],
-		error: palette.red[5]
+		background: palette.slate.lightest,
+		primary: palette.red[8],
+		secondary: palette.slate.lighter,
+		muted: palette.slate.lightest
+	},
+	borders: {
+		thin: `1px solid ${palette.slate.lightest}`
 	}
 };
