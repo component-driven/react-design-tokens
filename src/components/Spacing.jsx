@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeProvider } from "theme-ui";
+import { css, ThemeProvider } from "theme-ui";
 import { Swatches, Swatch, SpacingSwatch, SwatchToken } from "../index";
 import Stack from "stack-styled/emotion/Stack";
 
@@ -10,8 +10,8 @@ export default function Spacing({ theme }) {
 				<Swatches items={theme.space}>
 					{(token, value) => (
 						<Swatch token={token} value={value}>
-							<Stack gap={1}>
-								<SwatchToken>{token}</SwatchToken>
+							<Stack gap={3} gridTemplateColumns="auto 1fr">
+								<SwatchToken css={css({ p: 1 })}>{token}</SwatchToken>
 								<SpacingSwatch value={value} />
 							</Stack>
 						</Swatch>
