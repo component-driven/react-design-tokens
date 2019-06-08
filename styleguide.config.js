@@ -20,6 +20,10 @@ module.exports = {
 		{
 			name: "Components",
 			components: "src/components/*.jsx"
+		},
+		{
+			name: "Examples",
+			content: "src/examples/Readme.md"
 		}
 	],
 	ribbon: {
