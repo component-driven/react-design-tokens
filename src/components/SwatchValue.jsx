@@ -6,7 +6,7 @@ function SwatchValue({ color = "secondary", css: componentCSS, ...rest }) {
 		<p
 			css={css({
 				m: 0,
-				fontFamily: "body",
+				fontFamily: "monospace",
 				fontSize: "sm",
 				color,
 				...componentCSS
