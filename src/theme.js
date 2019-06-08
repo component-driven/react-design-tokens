@@ -14,7 +14,7 @@ const palette = {
 };
 export default {
 	fontSizes: {
-		xl: scale(2),
+		xl: scale(3),
 		lg: scale(1),
 		md: scale(0),
 		sm: scale(-0.5),
@@ -41,7 +41,7 @@ export default {
 		text: palette.slate.base,
 		background: palette.slate.lightest,
 		primary: "#E53935",
-		secondary: palette.slate.lighter,
-		muted: palette.slate.lightest
+		secondary: palette.slate.light,
+		muted: palette.slate.lighter
 	}
 };

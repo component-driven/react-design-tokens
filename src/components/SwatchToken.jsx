@@ -7,7 +7,8 @@ function SwatchToken({ color = "text", css: componentCSS, ...rest }) {
 			css={css({
 				m: 0,
 				fontFamily: "body",
-				fontSize: "md",
+				fontSize: "sm",
+				fontWeight: "normal",
 				color,
 				...componentCSS
 			})}

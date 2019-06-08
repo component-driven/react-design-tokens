@@ -11,18 +11,23 @@ export const ColorSwatch = ({ value, token }) => {
 		"rgba(255, 255, 255, 0.75)"
 	);
 	return (
-		<Swatch
-			token={token}
-			value={value}
-			css={css({
-				p: 3,
-				py: 4,
-				bg: value,
-				overflow: "hidden"
-			})}
-		>
-			<SwatchToken color={color}>{token}</SwatchToken>
-			<SwatchValue color={color}>{value}</SwatchValue>
+		<Swatch token={token} value={value}>
+			<div
+				css={css({
+					py: 5,
+					bg: value
+				})}
+			/>
+			<div
+				css={css({
+					p: 3,
+					bg: value,
+					overflow: "hidden"
+				})}
+			>
+				<SwatchToken color={color}>{token}</SwatchToken>
+				<SwatchValue color={color}>{value}</SwatchValue>
+			</div>
 		</Swatch>
 	);
 };

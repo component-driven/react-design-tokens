@@ -7,7 +7,7 @@ function SwatchValue({ color = "secondary", css: componentCSS, ...rest }) {
 			css={css({
 				m: 0,
 				fontFamily: "monospace",
-				fontSize: "sm",
+				fontSize: "xs",
 				color,
 				...componentCSS
 			})}

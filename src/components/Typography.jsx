@@ -12,22 +12,25 @@ import {
 export default function Typography({ theme }) {
 	return (
 		<ThemeProvider theme={theme}>
-			<Stack gap={2}>
+			<Stack gap={5}>
 				<Swatches theme={theme} items={theme.fontSizes}>
 					{(token, value) => (
 						<Swatch token={token} value={value}>
-							<Stack gap={4} gridTemplateColumns="minmax(auto, 10rem) 1fr">
-								<div
-									css={css({
-										alignSelf: "center",
-										overflow: "hidden"
-									})}
-								>
-									<SwatchToken>{token}</SwatchToken>
-									<SwatchValue>{value}</SwatchValue>
+							<Stack gap={2}>
+								<div>
+									<SwatchToken css={{ display: "inline-block" }}>
+										{token}
+									</SwatchToken>{" "}
+									<SwatchValue css={{ display: "inline-block" }}>
+										({value})
+									</SwatchValue>
 								</div>
-								<FontSizeSwatch token={token} value={value}>
-									Aa
+								<FontSizeSwatch
+									token={token}
+									value={value}
+									css={css({ color: "text" })}
+								>
+									The quick brown fox jumps over the lazy dog
 								</FontSizeSwatch>
 							</Stack>
 						</Swatch>

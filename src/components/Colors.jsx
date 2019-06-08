@@ -13,12 +13,12 @@ export default function Colors({ theme }) {
 			<Stack gap={gap}>
 				<Swatches theme={theme} items={palettes}>
 					{(key, value) => (
-						<Stack gap={0} minWidth={50}>
+						<Stack gap={0} minWidth={100}>
 							<PaletteSwatch token={key} value={value} />
 						</Stack>
 					)}
 				</Swatches>
-				<Stack gap={gap} minWidth={50}>
+				<Stack gap={gap} minWidth={150}>
 					<Swatches theme={theme} items={colors}>
 						{(key, value) => <ColorSwatch token={key} value={value} />}
 					</Swatches>
