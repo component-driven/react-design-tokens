@@ -3,14 +3,14 @@ Palette swatch renders all color tokens from a palette as defined in [System UI 
 It supports arrays
 
 ```jsx harmony
-import theme from "../components/theme";
+import theme from "../theme";
 <PaletteSwatch token={"red"} value={theme.colors.red} />;
 ```
 
 as well as object notation:
 
 ```jsx harmony
-import theme from "../components/theme";
+import theme from "../theme";
 
 <PaletteSwatch token={"slate"} value={theme.colors.slate} />;
 ```

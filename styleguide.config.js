@@ -28,10 +28,6 @@ module.exports = {
 		},
 		{
 			name: "Components",
-			components: "src/lib/*.jsx"
-		},
-		{
-			name: "Examples",
 			components: "src/components/*.jsx"
 		}
 	],

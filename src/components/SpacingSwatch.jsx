@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { css } from "theme-ui";
-import { SwatchValue } from "./";
+import { SwatchValue } from "../";
 
 const SpacingSwatch = ({ value, css: componentCSS, ...rest }) => {
 	return (

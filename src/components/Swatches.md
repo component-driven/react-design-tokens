@@ -1,7 +1,7 @@
 ```jsx harmony
 import Stack from "stack-styled/emotion/Stack";
-import theme from "../components/theme";
-import { Swatch, SwatchValue, SwatchToken, SpacingSwatch } from "./";
+import theme from "../theme";
+import { Swatch, SwatchToken, SpacingSwatch } from "../";
 
 <Stack gap={2}>
   <Swatches theme={theme} items={theme.space}>

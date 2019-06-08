@@ -7,7 +7,7 @@ import {
 	Swatches,
 	SwatchToken,
 	SwatchValue
-} from "../lib";
+} from "../index";
 
 export default function Typography({ theme }) {
 	return (

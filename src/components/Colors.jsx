@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "theme-ui";
 import { omitBy, pickBy, isString } from "lodash";
-import { Swatches, ColorSwatch, PaletteSwatch } from "../lib";
+import { Swatches, ColorSwatch, PaletteSwatch } from "../index";
 import Stack from "stack-styled/emotion/Stack";
 
 export default function Colors({ theme }) {

@@ -1,5 +1,5 @@
 ```jsx harmony
-import theme from "./theme";
+import theme from "../theme";
 
 <Typography theme={theme} />;
 ```
