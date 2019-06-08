@@ -13,7 +13,7 @@ module.exports = {
 		}
 	).parse,
 	getComponentPathLine(componentPath) {
-		const name = path.basename(componentPath, ".tsx");
+		const name = path.basename(componentPath, ".jsx");
 		return `import { ${name} } from '${pkg.name}';`;
 	},
 	skipComponentsWithoutExample: true,
