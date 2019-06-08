@@ -15,7 +15,7 @@ module.exports = {
 	sections: [
 		{
 			name: "Introduction",
-			content: "Readme.md"
+			content: path.join(__dirname, "Readme.md")
 		},
 		{
 			name: "Components",
@@ -23,7 +23,7 @@ module.exports = {
 		},
 		{
 			name: "Examples",
-			content: "src/examples/Readme.md"
+			content: path.join(__dirname, "src/examples/Readme.md")
 		}
 	],
 	ribbon: {
