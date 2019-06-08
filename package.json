@@ -18,6 +18,9 @@
     "type": "git",
     "url": "git+https://github.com/component-driven/react-design-tokens.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [],
   "author": "Andrey Okonetchnikov <andrey@okonet.ru>",
   "license": "MIT",
