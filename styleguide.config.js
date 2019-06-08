@@ -4,6 +4,7 @@ const pkg = require("./package.json");
 
 module.exports = {
 	title: pkg.name,
+	styleguideDir: path.join(__dirname, "docs"),
 	propsParser: reactDocgenTS.withCustomConfig(
 		path.join(__dirname, "tsconfig.json"),
 		{
