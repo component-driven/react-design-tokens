@@ -2,12 +2,17 @@
   "name": "@component-driven/react-design-tokens",
   "version": "0.0.0-development",
   "description": "React components to document design tokens in a styleguide",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "npm run styleguide",
     "test": "echo \"No test specified\" && exit 0",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "build": "babel --delete-dir-on-start --ignore '**/*.spec.js' --env-name cjs -d dist/ src/",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -24,7 +29,6 @@
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.11",
     "@mdx-js/react": "^1.0.20",
-    "@styled-system/theme-get": "^5.0.5",
     "clipboard-copy": "^3.0.0",
     "core-js": "^3.1.3",
     "lodash": "^4.17.11",
@@ -33,24 +37,20 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "stack-styled": "^2.0.0",
-    "styled-system": "^5.0.5",
     "theme-ui": "^0.1.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
     "@emotion/babel-preset-css-prop": "^10.0.9",
-    "@types/react": "^16.8.19",
-    "@types/react-dom": "^16.8.4",
     "babel-loader": "^8.0.6",
     "husky": "^2.4.0",
     "lint-staged": "^8.2.0",
     "prettier": "^1.18.0",
-    "react-docgen-typescript": "^1.12.4",
     "react-styleguidist": "^9.1.4",
-    "typescript": "^3.5.1",
     "webpack": "^4.33.0"
   },
   "husky": {

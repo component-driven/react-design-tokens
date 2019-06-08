@@ -1,18 +1,9 @@
 const path = require("path");
-const reactDocgenTS = require("react-docgen-typescript");
 const pkg = require("./package.json");
 
 module.exports = {
 	title: pkg.name,
 	styleguideDir: path.join(__dirname, "docs"),
-	propsParser: reactDocgenTS.withCustomConfig(
-		path.join(__dirname, "tsconfig.json"),
-		{
-			componentNameResolver: (exp, source) =>
-				exp.getName() === "StyledComponentClass" &&
-				reactDocgenTS.getDefaultExportForFile(source)
-		}
-	).parse,
 	getComponentPathLine(componentPath) {
 		const name = path.basename(componentPath, ".jsx");
 		return `import { ${name} } from '${pkg.name}';`;
