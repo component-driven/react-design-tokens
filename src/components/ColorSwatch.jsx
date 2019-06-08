@@ -14,13 +14,8 @@ export const ColorSwatch = ({ value, token }) => {
 		<Swatch token={token} value={value}>
 			<div
 				css={css({
-					py: 5,
-					bg: value
-				})}
-			/>
-			<div
-				css={css({
 					p: 3,
+					pt: 6,
 					bg: value,
 					overflow: "hidden"
 				})}

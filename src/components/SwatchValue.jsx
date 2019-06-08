@@ -8,6 +8,7 @@ function SwatchValue({ color = "secondary", css: componentCSS, ...rest }) {
 				m: 0,
 				fontFamily: "monospace",
 				fontSize: "xs",
+				whiteSpace: "nowrap",
 				color,
 				...componentCSS
 			})}
