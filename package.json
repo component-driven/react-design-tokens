@@ -52,6 +52,9 @@
     "husky": "^2.4.0",
     "lint-staged": "^8.2.0",
     "prettier": "^1.18.0",
+    "primer-colors": "^1.0.1",
+    "primer-spacing": "^1.0.2",
+    "primer-typography": "^1.0.1",
     "react-styleguidist": "^9.1.4",
     "webpack": "^4.33.0"
   },
