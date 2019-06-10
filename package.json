@@ -28,6 +28,10 @@
     "url": "https://github.com/component-driven/react-design-tokens/issues"
   },
   "homepage": "https://github.com/component-driven/react-design-tokens#readme",
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.11",
