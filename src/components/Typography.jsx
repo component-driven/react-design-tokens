@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider, css } from "theme-ui";
-import Stack from "stack-styled/emotion/Stack";
+import Stack from "stack-styled/emotion/Stack.js";
 import {
 	FontSizeSwatch,
 	Swatch,

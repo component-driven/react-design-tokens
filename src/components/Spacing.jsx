@@ -1,7 +1,7 @@
 import React from "react";
 import { css, ThemeProvider } from "theme-ui";
 import { Swatches, Swatch, SpacingSwatch, SwatchToken } from "../index";
-import Stack from "stack-styled/emotion/Stack";
+import Stack from "stack-styled/emotion/Stack.js";
 
 export default function Spacing({ theme }) {
 	return (

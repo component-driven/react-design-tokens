@@ -1,8 +1,8 @@
 import React from "react";
 import { ThemeProvider } from "theme-ui";
 import { omitBy, pickBy, isString } from "lodash";
+import Stack from "stack-styled/emotion/Stack.js";
 import { Swatches, ColorSwatch, PaletteSwatch } from "../index";
-import Stack from "stack-styled/emotion/Stack";
 
 export default function Colors({ theme }) {
 	const gap = 2;

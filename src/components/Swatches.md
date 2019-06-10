@@ -1,5 +1,5 @@
 ```jsx harmony
-import Stack from "stack-styled/emotion/Stack";
+import Stack from "stack-styled/emotion/Stack.js";
 import theme from "../theme";
 import { Swatch, SwatchToken, SpacingSwatch } from "../";
 
