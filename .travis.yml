@@ -1,9 +1,7 @@
 language: node_js
-cache:
-  directories:
-    - node_modules
+cache: yarn
 node_js:
-  - 9
+  - '10'
 after_success:
   - npm install --no-save semantic-release
   - npx travis-deploy-once "semantic-release"
