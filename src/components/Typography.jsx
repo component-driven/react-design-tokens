@@ -15,7 +15,7 @@ export default function Typography({ theme }) {
 			<Stack gap={5}>
 				<Swatches theme={theme} items={theme.fontSizes}>
 					{(token, value) => (
-						<Swatch token={token} value={value}>
+						<Swatch token={token} value={value} key={token}>
 							<Stack gap={2}>
 								<div>
 									<SwatchToken css={{ display: "inline-block" }}>

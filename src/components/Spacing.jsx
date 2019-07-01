@@ -9,7 +9,7 @@ export default function Spacing({ theme }) {
 			<Stack gap={4}>
 				<Swatches items={theme.space}>
 					{(token, value) => (
-						<Swatch token={token} value={value}>
+						<Swatch token={token} value={value} key={token}>
 							<Stack gap={3} gridTemplateColumns="auto 1fr">
 								<SwatchToken css={css({ p: 1 })}>{token}</SwatchToken>
 								<SpacingSwatch value={value} />

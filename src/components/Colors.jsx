@@ -12,15 +12,17 @@ export default function Colors({ theme }) {
 		<ThemeProvider theme={theme}>
 			<Stack gap={gap}>
 				<Swatches theme={theme} items={palettes}>
-					{(key, value) => (
-						<Stack gap={0} minWidth={100}>
-							<PaletteSwatch token={key} value={value} />
+					{(token, value) => (
+						<Stack gap={0} minWidth={100} key={token}>
+							<PaletteSwatch token={token} value={value} />
 						</Stack>
 					)}
 				</Swatches>
 				<Stack gap={gap} minWidth={150}>
 					<Swatches theme={theme} items={colors}>
-						{(key, value) => <ColorSwatch token={key} value={value} />}
+						{(token, value) => (
+							<ColorSwatch token={token} value={value} key={token} />
+						)}
 					</Swatches>
 				</Stack>
 			</Stack>
