@@ -59,7 +59,7 @@ const theme = {
 		monospace: "Menlo, monospace"
 	},
 	fontSizes: {
-		base: fontSizes.m,
+		base: fontSizes.md,
 		...fontSizes
 	},
 	fontWeights: {
