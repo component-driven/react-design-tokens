@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { readableColor } from "polished";
 import { Swatch, SwatchToken, SwatchValue } from "../";
 import { css } from "theme-ui";
+import { tokenPropType, valuePropType } from "../propTypes";
 
 export const ColorSwatch = ({ value, token }) => {
 	const color = readableColor(
@@ -28,8 +29,8 @@ export const ColorSwatch = ({ value, token }) => {
 };
 
 ColorSwatch.propTypes = {
-	token: PropTypes.string.isRequired,
-	value: PropTypes.string.isRequired
+	...tokenPropType,
+	...valuePropType
 };
 
 /** @component */

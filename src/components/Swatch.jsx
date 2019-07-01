@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import copy from "clipboard-copy";
+import { tokenPropType, valuePropType } from "../propTypes";
 
 function Swatch(props) {
 	return (
@@ -16,8 +17,8 @@ function Swatch(props) {
 }
 
 Swatch.propTypes = {
-	token: PropTypes.string.isRequired,
-	value: PropTypes.string.isRequired
+	...tokenPropType,
+	...valuePropType
 };
 
 export default Swatch;

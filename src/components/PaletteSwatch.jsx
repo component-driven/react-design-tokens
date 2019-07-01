@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Swatches, ColorSwatch } from "../index";
+import { tokenPropType, valuePropType } from "../propTypes";
 
 export const PaletteSwatch = ({ token, value }) => (
 	<Swatches items={value}>
@@ -9,8 +10,8 @@ export const PaletteSwatch = ({ token, value }) => (
 );
 
 PaletteSwatch.propTypes = {
-	token: PropTypes.string.isRequired,
-	value: PropTypes.string.isRequired
+	...tokenPropType,
+	...valuePropType
 };
 
 /** @component */
