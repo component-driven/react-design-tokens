@@ -1,37 +1,33 @@
 import React from "react";
-import { ThemeProvider, css } from "theme-ui";
+import { ThemeProvider } from "theme-ui";
 import Stack from "stack-styled/emotion/Stack.js";
-import {
-	FontSizeSwatch,
-	Swatch,
-	Swatches,
-	SwatchToken,
-	SwatchValue
-} from "../index";
+import { Swatch, Swatches, SwatchToken, TextStyleSwatch } from "../";
 
+/**
+ * Typography component showcases all available text styles defined in `theme.textStyles`
+ * object of [styled-system theme](https://styled-system.com/table#variants).
+ * @param theme
+ * @return React.Element
+ * @constructor
+ */
 export default function Typography({ theme }) {
 	return (
 		<ThemeProvider theme={theme}>
 			<Stack gap={5}>
-				<Swatches theme={theme} items={theme.fontSizes}>
+				<Swatches theme={theme} items={theme.textStyles || {}}>
 					{(token, value) => (
 						<Swatch token={token} value={value} key={token}>
 							<Stack gap={2}>
 								<div>
-									<SwatchToken css={{ display: "inline-block" }}>
+									<SwatchToken
+										css={{ display: "inline-block", fontFamily: "monospace" }}
+									>
 										{token}
-									</SwatchToken>{" "}
-									<SwatchValue css={{ display: "inline-block" }}>
-										({value})
-									</SwatchValue>
+									</SwatchToken>
 								</div>
-								<FontSizeSwatch
-									token={token}
-									value={value}
-									css={css({ color: "text" })}
-								>
+								<TextStyleSwatch token={token} value={value}>
 									The quick brown fox jumps over the lazy dog
-								</FontSizeSwatch>
+								</TextStyleSwatch>
 							</Stack>
 						</Swatch>
 					)}

@@ -3,7 +3,7 @@ export { default as Swatch } from "./components/Swatch";
 export { default as SwatchToken } from "./components/SwatchToken";
 export { default as SwatchValue } from "./components/SwatchValue";
 export { default as ColorSwatch } from "./components/ColorSwatch";
-export { default as FontSizeSwatch } from "./components/FontSizeSwatch";
+export { default as TextStyleSwatch } from "./components/TextStyleSwatch";
 export { default as PaletteSwatch } from "./components/PaletteSwatch";
 export { default as SpacingSwatch } from "./components/SpacingSwatch";
 export { default as Colors } from "./components/Colors";

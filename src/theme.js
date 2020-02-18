@@ -25,6 +25,18 @@ export default {
 		heading: '"Avenir Next", sans-serif',
 		monospace: "Menlo, monospace"
 	},
+	textStyles: {
+		body: {
+			fontFamily: "body",
+			fontSize: "md",
+			color: "text"
+		},
+		heading: {
+			fontSize: "xl",
+			fontFamily: "heading",
+			color: "secondary"
+		}
+	},
 	space: [
 		0,
 		"0.125rem", // 2px
