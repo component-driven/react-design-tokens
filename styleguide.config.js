@@ -1,8 +1,10 @@
+const fs = require("fs");
 const path = require("path");
 const pkg = require("./package.json");
 
 module.exports = {
 	title: pkg.name,
+	serverPort: 6061,
 	styleguideDir: path.join(__dirname, "docs"),
 	getComponentPathLine(componentPath) {
 		const name = path.basename(componentPath, ".jsx");
@@ -28,5 +30,24 @@ module.exports = {
 	],
 	ribbon: {
 		url: "https://github.com/component-driven/react-design-tokens"
+	},
+	updateExample(props, exampleFilePath) {
+		// props.settings are passed by any fenced code block, in this case
+		const { settings, lang } = props;
+		// "../mySourceCode.js"
+		if (typeof settings.file === "string") {
+			// "absolute path to mySourceCode.js"
+			const filepath = path.resolve(exampleFilePath, settings.file);
+			// displays the block as static code
+			settings.static = true;
+			// no longer needed
+			delete settings.file;
+			return {
+				content: fs.readFileSync(filepath, "utf8"),
+				settings,
+				lang
+			};
+		}
+		return props;
 	}
 };
