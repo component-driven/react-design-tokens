@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeProvider } from "theme-ui";
+import { ThemeProvider, css } from "theme-ui";
 import Stack from "stack-styled/emotion/Stack.js";
 import { Swatch, Swatches, SwatchToken, TextStyleSwatch } from "../";
 
@@ -20,7 +20,10 @@ export default function Typography({ theme }) {
 							<Stack gap={2}>
 								<div>
 									<SwatchToken
-										css={{ display: "inline-block", fontFamily: "monospace" }}
+										css={css({
+											display: "inline-block",
+											fontFamily: "monospace"
+										})}
 									>
 										{token}
 									</SwatchToken>
