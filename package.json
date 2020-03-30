@@ -13,7 +13,7 @@
 		"styleguide:build": "styleguidist build",
 		"build": "babel --delete-dir-on-start --ignore '**/*.spec.js' --env-name cjs -d dist/ src/",
 		"prepublishOnly": "npm run build",
-		"size": "npm run build && size-limit"
+		"size-build": "npm run build && size-limit"
 	},
 	"repository": {
 		"type": "git",
