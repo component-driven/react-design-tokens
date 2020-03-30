@@ -1,76 +1,86 @@
 {
-  "name": "@component-driven/react-design-tokens",
-  "version": "0.0.0-development",
-  "description": "React components to document design tokens in a styleguide",
-  "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "start": "npm run styleguide",
-    "test": "echo \"No test specified\" && exit 0",
-    "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build",
-    "build": "babel --delete-dir-on-start --ignore '**/*.spec.js' --env-name cjs -d dist/ src/",
-    "prepublishOnly": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/component-driven/react-design-tokens.git"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "keywords": [],
-  "author": "Andrey Okonetchnikov <andrey@okonet.ru>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/component-driven/react-design-tokens/issues"
-  },
-  "homepage": "https://github.com/component-driven/react-design-tokens#readme",
-  "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
-  },
-  "dependencies": {
-    "@emotion/core": "^10.0.10",
-    "@emotion/styled": "^10.0.11",
-    "@mdx-js/react": "^1.0.20",
-    "clipboard-copy": "^3.0.0",
-    "lodash": "^4.17.11",
-    "polished": "^3.4.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "stack-styled": "^2.0.0",
-    "theme-ui": "^0.1.3"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.3.3",
-    "@emotion/babel-preset-css-prop": "^10.0.9",
-    "babel-loader": "^8.0.6",
-    "husky": "^2.4.0",
-    "lint-staged": "^8.2.0",
-    "prettier": "^1.18.0",
-    "primer-colors": "^1.0.1",
-    "primer-spacing": "^1.0.2",
-    "primer-typography": "^1.0.1",
-    "react-styleguidist": "^9.1.4",
-    "webpack": "^4.33.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,md}": [
-      "prettier --write",
-      "git add"
-    ]
-  }
+	"name": "@component-driven/react-design-tokens",
+	"version": "0.0.0-development",
+	"description": "React components to document design tokens in a styleguide",
+	"main": "dist/index.js",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"start": "npm run styleguide",
+		"test": "echo \"No test specified\" && exit 0",
+		"styleguide": "styleguidist server",
+		"styleguide:build": "styleguidist build",
+		"build": "babel --delete-dir-on-start --ignore '**/*.spec.js' --env-name cjs -d dist/ src/",
+		"prepublishOnly": "npm run build",
+		"size-build": "npm run build",
+		"size": "npm run size-build && size-limit"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/component-driven/react-design-tokens.git"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"keywords": [],
+	"author": "Andrey Okonetchnikov <andrey@okonet.ru>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/component-driven/react-design-tokens/issues"
+	},
+	"homepage": "https://github.com/component-driven/react-design-tokens#readme",
+	"peerDependencies": {
+		"react": "^16.8.0",
+		"react-dom": "^16.8.0"
+	},
+	"dependencies": {
+		"@emotion/core": "^10.0.10",
+		"@emotion/styled": "^10.0.11",
+		"@mdx-js/react": "^1.0.20",
+		"clipboard-copy": "^3.0.0",
+		"lodash": "^4.17.11",
+		"polished": "^3.4.0",
+		"prop-types": "^15.7.2",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"stack-styled": "^2.0.0",
+		"theme-ui": "^0.1.3"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.4.4",
+		"@babel/core": "^7.4.5",
+		"@babel/preset-env": "^7.4.5",
+		"@babel/preset-react": "^7.0.0",
+		"@babel/preset-typescript": "^7.3.3",
+		"@emotion/babel-preset-css-prop": "^10.0.9",
+		"@size-limit/preset-big-lib": "^4.4.2",
+		"babel-loader": "^8.0.6",
+		"husky": "^2.4.0",
+		"lint-staged": "^8.2.0",
+		"prettier": "^1.18.0",
+		"primer-colors": "^1.0.1",
+		"primer-spacing": "^1.0.2",
+		"primer-typography": "^1.0.1",
+		"react-styleguidist": "^9.1.4",
+		"size-limit": "^4.4.2",
+		"webpack": "^4.33.0"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,jsx,json,ts,tsx,md}": [
+			"prettier --write",
+			"git add"
+		]
+	},
+	"size-limit": [
+		{
+			"path": "dist/index.js",
+			"limit": "100 KB"
+		}
+	]
 }
