@@ -8,7 +8,7 @@ const SpacingSwatch = ({ value, css: componentCSS, ...rest }) => {
 	return (
 		<div
 			sx={{
-				p: 2,
+				py: 2,
 				color: "secondary",
 				bg: "muted",
 				width: value,
@@ -16,7 +16,9 @@ const SpacingSwatch = ({ value, css: componentCSS, ...rest }) => {
 			}}
 			{...rest}
 		>
-			<SwatchValue color="inherit">{value}</SwatchValue>
+			<SwatchValue color="inherit" sx={{ mx: 2 }}>
+				{value}
+			</SwatchValue>
 		</div>
 	);
 };
