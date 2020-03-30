@@ -1,27 +1,27 @@
 ### [Component-driven Design Systems Workshop](https://github.com/component-driven/component-driven-development) Design System
 
 ```jsx harmony
-import Stack from "stack-styled/emotion/Stack.js";
+import { Grid } from "theme-ui";
 import theme from "./cdds";
 import { Colors, Spacing, Typography } from "../";
 
-<Stack gap={6}>
+<Grid gap={5}>
   <Colors theme={theme} />
   <Spacing theme={theme} />
   <Typography theme={theme} />
-</Stack>;
+</Grid>;
 ```
 
 ### GitHub Primer Design System
 
 ```jsx harmony
-import Stack from "stack-styled/emotion/Stack.js";
+import { Grid } from "theme-ui";
 import theme from "./primer";
 import { Colors, Spacing, Typography } from "../";
 
-<Stack gap={6}>
+<Grid gap={5}>
   <Colors theme={theme} />
   <Spacing theme={theme} />
   <Typography theme={theme} />
-</Stack>;
+</Grid>;
 ```

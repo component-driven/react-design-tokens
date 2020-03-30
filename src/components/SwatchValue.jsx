@@ -1,17 +1,18 @@
+/* @jsx jsx */
+import { jsx } from "theme-ui";
 import React from "react";
-import { css } from "theme-ui";
 
 function SwatchValue({ color = "secondary", css: componentCSS, ...rest }) {
 	return (
 		<p
-			css={css({
+			sx={{
 				m: 0,
 				fontFamily: "monospace",
 				fontSize: "xs",
 				whiteSpace: "nowrap",
 				color,
 				...componentCSS
-			})}
+			}}
 			{...rest}
 		/>
 	);

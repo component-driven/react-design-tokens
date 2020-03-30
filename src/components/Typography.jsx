@@ -1,6 +1,6 @@
+/* @jsx jsx */
+import { Grid, jsx, ThemeProvider } from "theme-ui";
 import React from "react";
-import { ThemeProvider, css } from "theme-ui";
-import Stack from "stack-styled/emotion/Stack.js";
 import { Swatch, Swatches, SwatchToken, TextStyleSwatch } from "../";
 
 /**
@@ -13,29 +13,27 @@ import { Swatch, Swatches, SwatchToken, TextStyleSwatch } from "../";
 export default function Typography({ theme }) {
 	return (
 		<ThemeProvider theme={theme}>
-			<Stack gap={5}>
+			<Grid gap={5}>
 				<Swatches theme={theme} items={theme.textStyles || {}}>
 					{(token, value) => (
 						<Swatch token={token} value={value} key={token}>
-							<Stack gap={2}>
-								<div>
-									<SwatchToken
-										css={css({
-											display: "inline-block",
-											fontFamily: "monospace"
-										})}
-									>
-										{token}
-									</SwatchToken>
-								</div>
+							<Grid gap={3}>
+								<SwatchToken
+									sx={{
+										display: "inline-block",
+										fontFamily: "monospace"
+									}}
+								>
+									{token}
+								</SwatchToken>
 								<TextStyleSwatch token={token} value={value}>
 									The quick brown fox jumps over the lazy dog
 								</TextStyleSwatch>
-							</Stack>
+							</Grid>
 						</Swatch>
 					)}
 				</Swatches>
-			</Stack>
+			</Grid>
 		</ThemeProvider>
 	);
 }

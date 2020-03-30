@@ -1,23 +1,26 @@
+/* @jsx jsx */
 import React from "react";
-import { css, ThemeProvider } from "theme-ui";
-import { Swatches, Swatch, SpacingSwatch, SwatchToken } from "../index";
-import Stack from "stack-styled/emotion/Stack.js";
+import { Grid, jsx, ThemeProvider } from "theme-ui";
+import { SpacingSwatch, Swatch, Swatches, SwatchToken } from "../index";
 
 export default function Spacing({ theme }) {
 	return (
 		<ThemeProvider theme={theme}>
-			<Stack gap={4}>
+			<Grid gap={4}>
 				<Swatches items={theme.space}>
 					{(token, value) => (
 						<Swatch token={token} value={value} key={token}>
-							<Stack gap={3} gridTemplateColumns="auto 1fr">
-								<SwatchToken css={css({ p: 1 })}>{token}</SwatchToken>
+							<Grid
+								gap={3}
+								sx={{ alignItems: "center", gridTemplateColumns: "auto 1fr" }}
+							>
+								<SwatchToken>{token}</SwatchToken>
 								<SpacingSwatch value={value} />
-							</Stack>
+							</Grid>
 						</Swatch>
 					)}
 				</Swatches>
-			</Stack>
+			</Grid>
 		</ThemeProvider>
 	);
 }

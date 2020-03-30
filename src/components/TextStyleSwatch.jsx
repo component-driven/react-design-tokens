@@ -1,5 +1,6 @@
+/* @jsx jsx */
+import { jsx } from "theme-ui";
 import React from "react";
-import { css } from "theme-ui";
 import { valuePropType } from "../propTypes";
 
 /**
@@ -12,12 +13,12 @@ import { valuePropType } from "../propTypes";
  */
 const TextStyleSwatch = ({ value, css: componentCSS, ...rest }) => (
 	<p
-		css={css({
+		sx={{
 			alignSelf: "center",
 			m: 0,
 			...value,
 			...componentCSS
-		})}
+		}}
 		{...rest}
 	/>
 );
