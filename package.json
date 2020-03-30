@@ -76,7 +76,10 @@
 			"git add"
 		]
 	},
-	"size-limit": {
-		"path": "dist/index.js"
-	}
+	"size-limit": [
+		{
+			"path": "dist/index.js",
+			"limit": "100 KB"
+		}
+	]
 }
