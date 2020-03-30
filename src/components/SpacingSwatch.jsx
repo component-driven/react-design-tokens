@@ -1,19 +1,19 @@
+/* @jsx jsx */
 import React from "react";
-import PropTypes from "prop-types";
-import { css } from "theme-ui";
+import { jsx } from "theme-ui";
 import { SwatchValue } from "../";
 import { valuePropType } from "../propTypes";
 
 const SpacingSwatch = ({ value, css: componentCSS, ...rest }) => {
 	return (
 		<div
-			css={css({
+			sx={{
 				p: 2,
 				color: "secondary",
 				bg: "muted",
 				width: value,
 				...componentCSS
-			})}
+			}}
 			{...rest}
 		>
 			<SwatchValue color="inherit">{value}</SwatchValue>
