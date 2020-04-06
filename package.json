@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "clipboard-copy": "^3.0.0",
+    "colorable": "^1.0.5",
     "lodash": "^4.17.11",
     "polished": "^3.4.0",
     "prop-types": "^15.7.2",
