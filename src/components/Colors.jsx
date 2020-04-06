@@ -3,7 +3,7 @@ import { Grid, ThemeProvider } from "theme-ui";
 import { omitBy, pickBy, isString } from "lodash";
 import { Swatches, ColorSwatch, PaletteSwatch } from "../index";
 
-export default function Colors({ theme }) {
+export default function Colors({ theme, aliasesKey }) {
 	const gap = 2;
 	const colors = pickBy(theme.colors, isString);
 	const palettes = omitBy(theme.colors, isString);
@@ -19,7 +19,11 @@ export default function Colors({ theme }) {
 								gridTemplateColumns: "repeat(auto-fit, minmax(90px, 1fr))"
 							}}
 						>
-							<PaletteSwatch token={token} value={value} />
+							<PaletteSwatch
+								token={token}
+								value={value}
+								aliasesKey={aliasesKey}
+							/>
 						</Grid>
 					)}
 				</Swatches>
@@ -29,9 +33,14 @@ export default function Colors({ theme }) {
 						gridTemplateColumns: "repeat(auto-fit, minmax(90px, 1fr))"
 					}}
 				>
-					<Swatches theme={theme} items={colors}>
-						{(token, value) => (
-							<ColorSwatch token={token} value={value} key={token} />
+					<Swatches theme={theme} items={colors} aliasesKey={aliasesKey}>
+						{(token, value, aliases) => (
+							<ColorSwatch
+								token={token}
+								value={value}
+								aliases={aliases}
+								key={token}
+							/>
 						)}
 					</Swatches>
 				</Grid>

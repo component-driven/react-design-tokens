@@ -34,16 +34,9 @@ as well as object notation:
 ```jsx harmony
 import theme from "../theme";
 
-const slate = { ...theme.colors.slate };
-
-slate.aliases = {
-  darker: ["black", "foused"],
-  dark: "active",
-  base: "default",
-  light: "hovered",
-  lighter: "disabled",
-  lightest: "inactive"
-};
-
-<PaletteSwatch token={"slate"} value={slate} aliasesKey="aliases" />;
+<PaletteSwatch
+  token={"slate"}
+  value={theme.colors.slate}
+  aliasesKey="aliases"
+/>;
 ```
