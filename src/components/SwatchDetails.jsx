@@ -10,7 +10,6 @@ function SwatchDetails({ color = "text", css: componentCSS, ...rest }) {
 				fontFamily: "body",
 				fontSize: "xs",
 				fontWeight: "normal",
-				textAlign: "right",
 				color,
 				...componentCSS
 			}}

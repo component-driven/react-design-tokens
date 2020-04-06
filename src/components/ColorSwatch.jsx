@@ -52,7 +52,9 @@ export const ColorSwatch = ({ value, token }) => {
 			>
 				<SwatchToken color={color}>{token}</SwatchToken>
 				<SwatchValue color={color}>{value}</SwatchValue>
-				<SwatchDetails color={color}>{access}</SwatchDetails>
+				<SwatchDetails color={color} css={{ textAlign: "right" }}>
+					{access}
+				</SwatchDetails>
 			</div>
 		</Swatch>
 	);
