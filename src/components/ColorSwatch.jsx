@@ -5,7 +5,7 @@ import { readableColor } from "polished";
 import { Swatch, SwatchToken, SwatchValue } from "../";
 import { tokenPropType, valuePropType } from "../propTypes";
 
-export const ColorSwatch = ({ value, token }) => {
+export const ColorSwatch = ({ value, token, aliases }) => {
 	const color = readableColor(value, "black", "white");
 	return (
 		<Swatch token={token} value={value}>
@@ -18,6 +18,11 @@ export const ColorSwatch = ({ value, token }) => {
 				}}
 			>
 				<SwatchToken color={color}>{token}</SwatchToken>
+				{aliases
+					? (Array.isArray(aliases) ? aliases : [aliases]).map(alias => (
+							<SwatchToken color={color}>{alias}</SwatchToken>
+					  ))
+					: null}
 				<SwatchValue color={color}>{value}</SwatchValue>
 			</div>
 		</Swatch>

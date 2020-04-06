@@ -1,11 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Swatches = ({ items = [], children }) => (
+const Swatches = ({ items = [], aliasesKey, children }) => (
 	<>
 		{Array.isArray(items)
-			? items.map((value, index) => children(index, value))
-			: Object.keys(items).map(key => children(key, items[key]))}
+			? items.map((value, index) =>
+					children(
+						index,
+						value,
+						aliasesKey && items[aliasesKey] ? items[aliasesKey][index] : null
+					)
+			  )
+			: Object.keys(items)
+					.filter(key => key !== aliasesKey)
+					.map(key =>
+						children(
+							key,
+							items[key],
+							aliasesKey && items[aliasesKey] ? items[aliasesKey][key] : null
+						)
+					)}
 	</>
 );
 
