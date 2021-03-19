@@ -9,7 +9,15 @@ const palette = {
 		base: "#2E3D49",
 		light: "#6D7780",
 		lighter: "#B4B9BD",
-		lightest: "#F7F7F8"
+		lightest: "#F7F7F8",
+		aliases: {
+			darker: "foused",
+			dark: "active",
+			base: "default",
+			light: "hovered",
+			lighter: "disabled",
+			lightest: "inactive"
+		}
 	}
 };
 export default {

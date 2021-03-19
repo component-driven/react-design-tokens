@@ -14,7 +14,19 @@ const palette = [
   "#C62828",
   "#B71C1C"
 ];
-<PaletteSwatch token={"red"} value={palette} />;
+palette.aliases = [
+  "lightest",
+  "light",
+  "diabled",
+  "inactive",
+  "regular",
+  "hovered",
+  "errorLight",
+  ["error", "failure"],
+  "errorDark"
+];
+
+<PaletteSwatch token={"red"} value={palette} aliasesKey="aliases" />;
 ```
 
 as well as object notation:
@@ -22,5 +34,9 @@ as well as object notation:
 ```jsx harmony
 import theme from "../theme";
 
-<PaletteSwatch token={"slate"} value={theme.colors.slate} />;
+<PaletteSwatch
+  token={"slate"}
+  value={theme.colors.slate}
+  aliasesKey="aliases"
+/>;
 ```
